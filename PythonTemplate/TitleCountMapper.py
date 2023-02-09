@@ -28,7 +28,7 @@ for line in sys.stdin:
     for d in delimiters[1:]:
         line = line.replace(d, default_delimiter)
     word_lst = line.lower().split(default_delimiter)
-    word_lst = [w for w in word_lst if w not in stop_words]
+    word_lst = [w for w in word_lst if w not in stop_words and w.strip() != '']
     for w in word_lst:
         print('%s\t%s' % (w , 1)) # pass this output to reducer
 
