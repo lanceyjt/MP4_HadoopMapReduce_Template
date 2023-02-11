@@ -9,6 +9,7 @@ word_freq = []
 for line in sys.stdin:
 
        #TODO
+       line = line.strip()
        word, count = line.split('\t')
        word_freq.append([word, int(count)])
 

@@ -7,8 +7,9 @@ word_freq = []
 # input comes from STDIN
 for line in sys.stdin:
     # TODO
+    line = line.strip()
     word, count = line.split('\t')
-    word_freq.append([word, count])
+    word_freq.append([word, int(count)])
 
     # print('%s\t%s' % (  ,  )) print as final output
 word_freq.sort(reverse=False, key=lambda x: (x[1], x[0]))
