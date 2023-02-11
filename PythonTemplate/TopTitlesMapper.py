@@ -10,7 +10,7 @@ for line in sys.stdin:
 
        #TODO
        word, count = line.split('\t')
-       word_freq.append([word, count])
+       word_freq.append([word, int(count)])
 
 word_freq.sort(reverse=False, key=lambda x: (x[1], x[0]))
 
