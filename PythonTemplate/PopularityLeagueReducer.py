@@ -13,3 +13,5 @@ for line in sys.stdin:
 #TODO
 page_count.sort(reverse=False, key=lambda x: x[0])
 # print('%s\t%s' % (  ,  )) print as final output
+for p in page_count:
+    print('%s\t%s' % (p[0],p[1]))
