@@ -7,8 +7,11 @@ page_count = []
 for line in sys.stdin:
     # TODO
     line = line.strip()
-    page, count = line.split('\t')
-    page_count.append([int(page), int(count)])
+    try:
+        page, count = line.split('\t')
+        page_count.append([int(page), int(count)])
+    except:
+        continue
 
 #TODO
 page_count.sort(reverse=False, key=lambda x: x[0])

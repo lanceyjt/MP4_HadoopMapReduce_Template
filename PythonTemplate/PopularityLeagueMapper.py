@@ -10,7 +10,6 @@ with open(leaguePath) as f:
        #TODO
        pages = [line.strip() for line in f]
 
-print("Pages: [AAA]", pages)
 for line in sys.stdin:
 
        #TODO
