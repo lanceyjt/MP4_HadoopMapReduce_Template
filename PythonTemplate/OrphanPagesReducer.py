@@ -16,9 +16,14 @@ for line in sys.stdin:
 for dest in dests:
   is_orphan_page[dest] = all([is_orphan_page.get(dest, False), False])
 
+orphan_pages = []
 for (k,v) in is_orphan_page.items():
   if v:
-    print(k)
+    orphan_pages.append(int(k))
+
+orphan_pages.sort()
+for p in orphan_pages:
+  print(p)
 
 #TODO
 # print(xx) print as final output
