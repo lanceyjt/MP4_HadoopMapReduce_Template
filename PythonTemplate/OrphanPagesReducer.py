@@ -14,7 +14,7 @@ for line in sys.stdin:
   dests.append(dest)
 
 for dest in dests:
-  is_orphan_page[dest] = all(is_orphan_page.get(dest, False), False)
+  is_orphan_page[dest] = all([is_orphan_page.get(dest, False), False])
 
 for (k,v) in is_orphan_page.items():
   if v:
