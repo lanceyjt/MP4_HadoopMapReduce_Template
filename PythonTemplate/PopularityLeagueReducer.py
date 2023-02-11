@@ -14,7 +14,7 @@ for line in sys.stdin:
         continue
 
 #TODO
-page_count.sort(reverse=False, key=lambda x: x[0])
+page_count.sort(reverse=True, key=lambda x: x[0])
 # print('%s\t%s' % (  ,  )) print as final output
 for p in page_count:
     print('%s\t%s' % (p[0],p[1]))
