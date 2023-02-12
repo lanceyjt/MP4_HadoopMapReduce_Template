@@ -40,7 +40,7 @@ for line in sys.stdin:
   dests.add(dest)
 
 orphan_pages = list(sources.difference(dests))
-
+orphan_pages = [int(x) for x in orphan_pages]
 orphan_pages.sort()
 for p in orphan_pages:
   print(p)
