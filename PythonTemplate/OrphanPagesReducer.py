@@ -37,7 +37,8 @@ for line in sys.stdin:
   line = line.strip()
   source, dest = line.split('\t')
   sources.add(source)
-  dests.add(dest)
+  if source != dest:
+    dests.add(dest)
 
 orphan_pages = list(sources.difference(dests))
 orphan_pages = [int(x) for x in orphan_pages]
